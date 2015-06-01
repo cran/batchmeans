@@ -13,7 +13,7 @@
   \link{mean}}.}
 
   \item{main}{an overall title for the plot. The default is
-  \code{"Estimates vs Sample Size"}.}
+  \dQuote{\code{Estimates vs Sample Size}}.}
 
   \item{add}{logical. If \code{TRUE}, add to a current
   plot.}

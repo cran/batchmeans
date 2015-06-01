@@ -8,11 +8,12 @@
   \item{x}{a vector of values from a Markov chain.}
 
   \item{size}{the batch size. The default value is
-  \code{"sqroot"}, which uses the square root of the sample
-  size. \code{"cuberoot"} will cause the function to use
-  the cube root of the sample size. A numeric value may be
-  provided if neither \code{"sqroot"} nor \code{"cuberoot"}
-  is satisfactory.}
+  \dQuote{\code{sqroot}}, which uses the square root of the
+  sample size. \dQuote{\code{cuberoot}} will cause the
+  function to use the cube root of the sample size. A
+  numeric value may be provided if neither
+  \dQuote{\code{sqroot}} nor \dQuote{\code{cuberoot}} is
+  satisfactory.}
 
   \item{warn}{a logical value indicating whether the
   function should issue a warning if the sample size is too

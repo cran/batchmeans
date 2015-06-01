@@ -12,9 +12,9 @@
   \code{bmmat} returns a matrix with \code{ncol(x)} rows
   and two columns. The row names of the matrix are the same
   as the column names of \code{x}. The column names of the
-  matrix are \code{"est"} and \code{"se"}. The \eqn{j}th
-  row of the matrix contains the result of applying
-  \code{bm} to the \eqn{j}th column of \code{x}.
+  matrix are \dQuote{\code{est}} and \dQuote{\code{se}}.
+  The \eqn{j}th row of the matrix contains the result of
+  applying \code{bm} to the \eqn{j}th column of \code{x}.
 }
 \description{
   Apply \code{bm} to each column of a matrix or data frame

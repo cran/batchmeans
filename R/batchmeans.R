@@ -2,7 +2,7 @@
 #' Perform consistent batch means estimation on a vector of values from a Markov chain.
 #'
 #' @param x a vector of values from a Markov chain.
-#' @param size the batch size. The default value is \code{"sqroot"}, which uses the square root of the sample size. \code{"cuberoot"} will cause the function to use the cube root of the sample size. A numeric value may be provided if neither \code{"sqroot"} nor \code{"cuberoot"} is satisfactory.
+#' @param size the batch size. The default value is \dQuote{\code{sqroot}}, which uses the square root of the sample size. \dQuote{\code{cuberoot}} will cause the function to use the cube root of the sample size. A numeric value may be provided if neither \dQuote{\code{sqroot}} nor \dQuote{\code{cuberoot}} is satisfactory.
 #' @param warn a logical value indicating whether the function should issue a warning if the sample size is too small (less than 1,000).
 #' @return \code{bm} returns a list with two elements:
 #'         \item{est}{the mean of the vector.}
@@ -53,7 +53,7 @@ bm = function(x, size = "sqroot", warn = FALSE)
 #' Apply \code{bm} to each column of a matrix or data frame of MCMC samples.
 #'
 #' @param x a matrix or data frame with each row being a draw from the multivariate distribution of interest.
-#' @return \code{bmmat} returns a matrix with \code{ncol(x)} rows and two columns. The row names of the matrix are the same as the column names of \code{x}. The column names of the matrix are \code{"est"} and \code{"se"}. The \eqn{j}th row of the matrix contains the result of applying \code{bm} to the \eqn{j}th column of \code{x}.
+#' @return \code{bmmat} returns a matrix with \code{ncol(x)} rows and two columns. The row names of the matrix are the same as the column names of \code{x}. The column names of the matrix are \dQuote{\code{est}} and \dQuote{\code{se}}. The \eqn{j}th row of the matrix contains the result of applying \code{bm} to the \eqn{j}th column of \code{x}.
 #' @seealso \code{\link{bm}}, which performs consistent batch means estimation for a vector.
 #' @export
 
@@ -75,7 +75,7 @@ bmmat = function(x)
 #'
 #' @param x a sample vector.
 #' @param fun a function such that \eqn{E(fun(x))} is the quantity of interest. The default is \code{fun = \link{mean}}.
-#' @param main an overall title for the plot. The default is \code{"Estimates vs Sample Size"}.
+#' @param main an overall title for the plot. The default is \dQuote{\code{Estimates vs Sample Size}}.
 #' @param add logical. If \code{TRUE}, add to a current plot.
 #' @param \dots additional arguments to the plotting function.
 #' @return \code{NULL}
