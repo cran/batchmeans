@@ -14,6 +14,18 @@
 #'
 #' Flegal, J. M., Haran, M. and Jones, G. L. (2008) Markov chain Monte Carlo: Can we trust the third significant figure? \emph{Statistical Science}, \bold{23}, 250--260.
 #' @seealso \code{\link{bmmat}}, which applies \code{bm} to each column of a matrix or data frame.
+#' @examples
+#'
+#' # Simulate a sample path of length 10,000 for an AR(1) chain with rho equal to 0.7.
+#'
+#' X = numeric(10000)
+#' X[1] = 1
+#' for (i in 1:9999)
+#'     X[i + 1] = 0.7 * X[i] + rnorm(1)
+#'
+#' # Estimate the mean and MCSE.
+#'
+#' bm(X)
 #' @export
 
 bm = function(x, size = "sqroot", warn = FALSE)
@@ -80,12 +92,20 @@ bmmat = function(x)
 #' @param \dots additional arguments to the plotting function.
 #' @return \code{NULL}
 #' @examples
-#' \dontrun{
-#' estvssamp(x, main = expression(E(beta)))
-#' estvssamp(y, add = TRUE, lty = 2, col = "red")}
+#'
+#' # Simulate a sample path of length 10,000 for an AR(1) chain with rho equal to 0.7.
+#'
+#' X = numeric(10000)
+#' X[1] = 1
+#' for (i in 1:9999)
+#'     X[i + 1] = 0.7 * X[i] + rnorm(1)
+#'
+#' # Plot MC estimates versus sample size.
+#'
+#' estvssamp(X)
 #' @export
 
-estvssamp = function(x, fun = mean, main = "Estimates vs Sample Size", add = FALSE,...)
+estvssamp = function(x, fun = mean, main = "Estimate vs Sample Size", add = FALSE,...)
 {
     if (length(x) < 100)
         size = 1
